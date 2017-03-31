@@ -1,0 +1,74 @@
+# Codeception Test Suite Configuration
+#
+# Suite for acceptance tests.
+# Perform tests in browser using the WebDriver or PhpBrowser.
+# If you need both WebDriver and PHPBrowser tests - create a separate suite.
+
+class_name: AcceptanceTester
+
+modules:
+  enabled:
+    - \BrowserStackWebDriver
+    - \Helper\Acceptance
+  config:
+    \BrowserStackWebDriver:
+      host: 'hub-cloud.browserstack.com'
+      port: 80
+      browser: chrome
+      url: 'http://www.google.com'
+      capabilities:
+        'browserstack.user': 'komalbatra1'
+        'browserstack.key' : 'dKxDxBMA4Yuysy3KknED'
+        'browserstack.debug': true
+        'build': 'codeception-browserstack'
+   
+
+
+env:
+  single:
+    modules:
+      config:
+        \BrowserStackWebDriver:
+          capabilities:
+            'name': 'single_test'
+
+  local:
+    modules:
+      config:
+        \BrowserStackWebDriver:
+          url: 'http://bs-local.com:45691'
+          capabilities:
+            'browserstack.local': true
+            'name': 'local_test'
+
+  parallel_0:
+    modules:
+      config:
+        \BrowserStackWebDriver:
+          browser: 'chrome'
+          capabilities:
+            'name': 'parallel_test'
+
+  parallel_1:
+    modules:
+      config:
+        \BrowserStackWebDriver:
+          browser: 'firefox'
+          capabilities:
+            'name': 'parallel_test'
+
+  parallel_2:
+    modules:
+      config:
+        \BrowserStackWebDriver:
+          browser: 'safari'
+          capabilities:
+            'name': 'parallel_test'
+
+  parallel_3:
+    modules:
+      config:
+        \BrowserStackWebDriver:
+          browser: 'internet explorer'
+          capabilities:
+            'name': 'parallel_test'
