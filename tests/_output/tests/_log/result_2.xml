@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="acceptance (parallel_2)" tests="1" assertions="0" failures="1" errors="0" time="1.069764">
+    <testcase name="login" file="/home/user/Documents/parallelcodeceptiontestcases/tests/acceptance/loginCept.php" feature="" assertions="0" time="1.069764">
+      <failure type="Codeception\Exception\ElementNotFound">loginCept: Ensure that user is sucessfully logged in
+Field by name, label, CSS or XPath element with 'Username' was not found.
+
+/home/user/Documents/parallelcodeceptiontestcases/tests/_support/_generated/AcceptanceTesterActions.php:1470
+/home/user/Documents/parallelcodeceptiontestcases/tests/acceptance/loginCept.php:8
+</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

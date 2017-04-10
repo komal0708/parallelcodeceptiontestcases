@@ -1,6 +1,17 @@
 {
-    "require": {
-        "codeception/robo-paracept": "dev-master",
-        "codeception/codeception": "^2.2"
-    }
+  "require": {
+    "codeception/codeception": "*",
+    "browserstack/browserstack-local": "dev-master",
+    "codegyre/robo": "*",
+    "codeception/robo-paracept": "@dev"
+  },
+  "scripts": {
+    "test": "composer single && composer local && composer parallel",
+    "single": "vendor/bin/codecept run --env single -g single",
+    "local": "vendor/bin/codecept run --env local -g local",
+    "parallel": "vendor/bin/robo parallel:all"
+  },
+  "autoload": {
+    "classmap": ["lib/"]
+  }
 }

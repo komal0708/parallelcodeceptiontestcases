@@ -21,7 +21,6 @@ modules:
         'browserstack.key' : 'dKxDxBMA4Yuysy3KknED'
         'browserstack.debug': true
         'build': 'codeception-browserstack'
-   
 
 
 env:

@@ -1,6 +1,5 @@
 <?php
   use Codeception\Util\Fixtures;
-  use lib\BrowserStackWebDriver;
 
   // @group single
   $I = new AcceptanceTester($scenario);
